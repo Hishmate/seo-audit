@@ -14,8 +14,16 @@
     "build": "tsc",
     "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
     "example": "node example/serve.mjs",
+    "prepack": "npm run build",
+    "prepare": "npm run build",
     "test": "npm run build && node --test \"test/*.test.mjs\""
   },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "seo",
     "audit",
