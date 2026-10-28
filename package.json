@@ -1,0 +1,35 @@
+{
+  "name": "seo-audit",
+  "version": "1.0.0",
+  "description": "Zero-dependency SEO audit CLI: CJK-aware title/description width, canonical, hreflang reciprocity, JSON-LD, Open Graph, robots.txt and sitemap.xml. Per-page report, non-zero exit code for CI.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "seo-audit": "./dist/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "example": "node example/serve.mjs",
+    "test": "npm run build && node --test \"test/*.test.mjs\""
+  },
+  "keywords": [
+    "seo",
+    "audit",
+    "cli",
+    "hreflang",
+    "canonical",
+    "json-ld",
+    "open-graph",
+    "sitemap",
+    "robots-txt",
+    "ci"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.5.0"
+  }
+}
